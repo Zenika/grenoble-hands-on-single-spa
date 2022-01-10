@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    latLongMap: {
+    latLongMap: JSON.parse(localStorage.getItem('cities') || {
       GRENOBLE: [45.183916, 5.703630],
       SINGAPOUR: [1.295600, 103.858995],
       BORDEAUX: [44.848089, -0.571017],
@@ -13,7 +13,7 @@ export default createStore({
       NANTES: [47.207408, -1.556187],
       LILLE: [50.648670, 3.075520],
       PARIS: [48.878932, 2.328487]
-    }
+    })
   },
   getters: {
     getMapPosition: state => state.latLongMap,
