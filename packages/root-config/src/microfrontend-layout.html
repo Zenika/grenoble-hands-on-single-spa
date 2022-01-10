@@ -1,25 +1,37 @@
 <single-spa-router>
-  <!--
-
-    This is the single-spa Layout Definition for your microfrontends.
-    See https://single-spa.js.org/docs/layout-definition/ for more information.
-
-  -->
-
-  <!-- Example layouts you might find helpful:
-
-  <nav>
-    <application name="@org/navbar"></application>
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <h1 class="title navbar-start">
+          <a class="navbar-item" href="/">Zenika Cities weather</a>
+        </h1>
+      </div>
+      <h2 class="navbar-item has-text-white">
+        The best weather app in single-spa
+      </h2>
+      <div class="navbar-menu navbar-end">
+        <a class="navbar-item has-text-white" href="/create">
+          Add city
+        </a>
+      </div>
+    </div>
   </nav>
-  <route path="settings">
-    <application name="@org/settings"></application>
-  </route>
-
-  -->
 
   <main>
     <route default>
       <application name="@single-spa/welcome"></application>
     </route>
   </main>
+
+  <footer class="footer">
+    <p class="content has-text-centered">
+      Developed by
+      <a href="https://github.com/P0ppoff" rel="nofollow">Jules Hablot</a> with
+      <a href="https://github.com/chocho01" rel="nofollow">Martin Choraine</a> with
+      <a href="https://github.com/thuchede" rel="nofollow">Thomas Huchede</a> with
+      <a href="https://github.com/hadrien-thomas-zenika" rel="nofollow">Hadrien Thomas</a> with
+      <a href="http://www.7timer.info/index.php" rel="nofollow">7Timer!</a> for
+      <a href="https://zenika.com/" rel="nofollow">Zenika</a> with ❤️
+    </p>
+  </footer>
 </single-spa-router>
