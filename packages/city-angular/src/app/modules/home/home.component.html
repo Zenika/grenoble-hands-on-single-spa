@@ -1,0 +1,9 @@
+<section>
+  <h1 class="title">Offices</h1>
+
+  <div class="panel">
+    <a class="panel-block p-4" [href]="'city/' + city" *ngFor="let city of cities">
+      <h2 class="subtitle">{{ city }}</h2>
+    </a>
+  </div>
+</section>

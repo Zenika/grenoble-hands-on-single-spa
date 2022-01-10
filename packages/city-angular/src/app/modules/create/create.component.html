@@ -1,0 +1,30 @@
+<h1 class="title">Create city</h1>
+
+<div class="card">
+  <form class="card-content" (submit)="createCity()" [formGroup]="form">
+    <div class="field">
+      <label for="name" class="label">Name</label>
+      <div class="control">
+        <input id-="name" class="input" type="text" formControlName="name" placeholder="ex : TOULOUSE">
+      </div>
+      <label for="name" class="help is-danger" *ngIf="form.get('name').touched && form.get('name').errors">Name is required</label>
+    </div>
+    <div class="field">
+      <label for="latitude" class="label">Latitude</label>
+      <div class="control">
+        <input id="latitude" class="input" type="text" formControlName="latitude" placeholder="ex: 43.6000">
+      </div>
+      <label for="latitude" class="help is-danger" *ngIf="form.get('latitude').touched && form.get('latitude').errors">Latitude is required and must be > -180 and < 180</label>
+    </div>
+    <div class="field">
+      <label for="longitude" class="label">Longitude</label>
+      <div class="control">
+        <input id="longitude" class="input" type="text" formControlName="longitude" placeholder="ex: 1.4333">
+      </div>
+      <label for="longitude" class="help is-danger" *ngIf="form.get('longitude').touched && form.get('longitude').errors">Longitude is required and must be > -180 and < 180</label>
+    </div>
+    <div class="control">
+      <button type="submit" class="button is-primary" [disabled]="form.invalid">Create</button>
+    </div>
+  </form>
+</div>
